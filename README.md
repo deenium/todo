@@ -1,3 +1,3 @@
 # todo
 
-PERN stack based CRUD application
+PERN stack based CRUD application.
