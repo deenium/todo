@@ -26,7 +26,7 @@ For DB: (for testing purpose)
 For Frontend:
 
 1. move to parent folder "/todo"
-2. npx create-react-app client
+2. yarn create react-app client --template typescript
 3. cd client
 4. yarn install
 5. yarn run build
