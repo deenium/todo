@@ -31,3 +31,5 @@ For Frontend:
 4. yarn install
 5. yarn run build
 6. yarn start (to start development server)
+7. yarn add bootstrap (to setup bootstrap)
+8. Add "import 'bootstrap/dist/css/bootstrap.min.css';" in index.tsx
