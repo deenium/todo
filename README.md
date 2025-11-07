@@ -22,3 +22,12 @@ For DB: (for testing purpose)
 3. \c perntodo (to move to 'perntodo' database, if it exists)
 4. \dt (to see all the tables in the database)
 5. select \* from tableName; (to print all columns and rows of the tableName table)
+
+For Frontend:
+
+1. move to parent folder "/todo"
+2. npx create-react-app client
+3. cd client
+4. yarn install
+5. yarn run build
+6. yarn start (to start development server)
