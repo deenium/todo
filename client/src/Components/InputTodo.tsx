@@ -1,19 +1,26 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export const InputTodo = () => {
   const [description, setDescription] = useState<string>("");
+  const navigate = useNavigate();
 
   const onSubmitForm = async (e: React.FormEvent<HTMLFormElement>) => {
     // to avoid refreshing the page on submit
     e.preventDefault();
     try {
       const body = { description };
+      if (description.trim() === "") {
+        return; // Do not submit if the description is empty
+      }
       const response = await fetch("http://localhost:8000/todos", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),
       });
-      console.log(response);
+
+      setDescription("");
+      navigate("/");
     } catch (err: any) {
       console.error(err.message);
     }
