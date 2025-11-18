@@ -23,6 +23,7 @@ export const InputTodo = () => {
       navigate("/");
     } catch (err: any) {
       console.error(err.message);
+      alert("Failed to add todo");
     }
   };
   return (
