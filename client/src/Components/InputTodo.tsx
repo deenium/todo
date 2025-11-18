@@ -28,7 +28,7 @@ export const InputTodo = () => {
   };
   return (
     <>
-      <h1 className="text-center mt-5">Input Todo Component</h1>
+      <h1 className="text-center mt-5">Your Own Todo List </h1>
       <form className="d-flex w-50 mx-auto" onSubmit={onSubmitForm}>
         <input
           type="text"

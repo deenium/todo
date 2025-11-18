@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Navigate } from "react-router-dom";
+import { EditTodo } from "./EditTodo";
 
 export const ListTodo = () => {
   const [todos, setTodos] = useState<
@@ -35,7 +36,7 @@ export const ListTodo = () => {
 
   return (
     <>
-      <h1 className="">List Todos</h1>
+      <h1 className="text-center mt-5">Todo List</h1>
       <table className="table table-bordered table-hover mt-5 w-50 mx-auto text-center bg-white shadow-sm rounded">
         <thead className="table-light">
           <tr>
@@ -50,7 +51,7 @@ export const ListTodo = () => {
             <tr key={todo.todo_id}>
               <td className="text-start ps-3">{todo.description}</td>
               <td>
-                <button className="btn btn-sm btn-outline-primary">Edit</button>
+                <EditTodo />
               </td>
               <td>
                 <button
