@@ -3,7 +3,7 @@ import cors from "cors";
 import pool from "./db";
 
 const app = express();
-
+const PORT = 8000;
 // Middleware
 app.use(cors()); // Standard middleware of expressJS application
 app.use(express.json()); // To parse JSON bodies from frontend
@@ -86,6 +86,6 @@ app.delete("/todos/:id", async (req, res) => {
   }
 });
 
-app.listen(8000, () => {
-  console.log("Server is running on http://localhost:8000");
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
 });

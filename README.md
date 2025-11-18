@@ -14,6 +14,7 @@ For BACKEND: typescript setup (https://www.youtube.com/watch?v=oODlPLfnTIk)
 6. create nodemon.json file (honestly, idk why)
 7. Add scripts to package.json (to setup custom run commands on terminal)
 8. npm install express cors pg (to install expressJS, cors, Postgres)
+9. "yarn run dev" for running server
 
 For DB: (for testing purpose)
 
