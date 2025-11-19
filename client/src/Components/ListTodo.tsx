@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react";
 import { Navigate } from "react-router-dom";
 import { EditTodo } from "./EditTodo";
+import { Todo } from "./types";
 
 export const ListTodo = () => {
-  const [todos, setTodos] = useState<
-    Array<{ todo_id: number; description: string }>
-  >([]);
+  const [todos, setTodos] = useState<Array<Todo>>([]);
 
   const getTodos = async () => {
     try {
@@ -51,7 +50,7 @@ export const ListTodo = () => {
             <tr key={todo.todo_id}>
               <td className="text-start ps-3">{todo.description}</td>
               <td>
-                <EditTodo />
+                <EditTodo todo={todo} />
               </td>
               <td>
                 <button
